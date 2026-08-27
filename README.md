@@ -6,10 +6,15 @@ Homebrew formulae for [build198x](https://github.com/build198x/build198x), which
 brew install build198x/homebrew-tap/build198x
 ```
 
-Only the `build198x` pipeline CLI is packaged here today. The standalone
-`build198x-adf` binary is on crates.io (`cargo install build198x-adf`) but is
-not yet attached to a GitHub Release, so there is nothing for a formula to
-point at. See build198x/build198x for that.
+The standalone ADF tool has its own formula:
+
+```sh
+brew install build198x/homebrew-tap/build198x-adf
+```
+
+`build198x adf` is the same operation inside the pipeline tool; `build198x-adf`
+is the leaner install for someone who only wants ADF mastering. It is also on
+crates.io, so `cargo install build198x-adf` works too.
 
 ## About this repository
 
