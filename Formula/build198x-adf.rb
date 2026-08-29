@@ -1,20 +1,20 @@
 class Build198xAdf < Formula
   desc "Create, master, verify, and inspect Amiga ADF floppy disk images (OFS/FFS) — the standalone ADF tool."
   homepage "https://build198x.github.io"
-  version "0.2.5"
+  version "0.2.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.5/build198x-adf-aarch64-apple-darwin.tar.xz"
-      sha256 "4d600c0a52e6854975a1e2c48fed96286d6e9ec92109c5c0dd3e253b3997e37e"
+      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.6/build198x-adf-aarch64-apple-darwin.tar.xz"
+      sha256 "0de26a8e845c55da04e2de912733c4bcceff0c813dda4cc4b6189dbed3cddcea"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.5/build198x-adf-x86_64-apple-darwin.tar.xz"
-      sha256 "0153de8cc8bba650011475849decd3045b9318b79af4d12a51ff7768d7bef168"
+      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.6/build198x-adf-x86_64-apple-darwin.tar.xz"
+      sha256 "5d1468a40c430f0d0c9dd5e4714cd4a10a7d00b2f403ac4854a0488c3f701183"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.5/build198x-adf-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "de1269ce641f7cbef67e3a3ce352fbc4d31352e594b7aa80830a8478fad0e643"
+    url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.6/build198x-adf-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "0f4b9cc62d35aa5d26e59e97f33cdbf1a2e2a907e1bb3354791aba908a1dfb69"
   end
   license "GPL-2.0-or-later"
 
