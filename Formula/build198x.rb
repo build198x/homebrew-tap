@@ -1,20 +1,20 @@
 class Build198x < Formula
   desc "The 198x family's build-tools pipeline — asset conversion, data packing, and media mastering for retro targets."
   homepage "https://build198x.github.io"
-  version "0.2.7"
+  version "0.2.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.7/build198x-aarch64-apple-darwin.tar.xz"
-      sha256 "54d7de11a179753c629c397d885a266441acd6ea4765d91feeeadd787d12256c"
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.8/build198x-aarch64-apple-darwin.tar.xz"
+      sha256 "4da5ad59650e0934cfa1556c189f0fa4364936c81f24e4abb118d5f2a4d7af52"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.7/build198x-x86_64-apple-darwin.tar.xz"
-      sha256 "da6502711acae67ed22b27a085d3f24865da7acae57261e36503713c17dbdc5a"
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.8/build198x-x86_64-apple-darwin.tar.xz"
+      sha256 "dd2f9777e4d04576cc8cbbfea09b983c077e6e674cc80dce6dfacc67c327f40f"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.7/build198x-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "094d550bdb32aecbc68a88b082e20da81f796e09fcb2a809c84688eb7069bc52"
+    url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.8/build198x-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "e5ac1d955fb968e035685505c6c4f520ccf217240227e84b5d14993980ab51a2"
   end
   license "GPL-2.0-or-later"
 
