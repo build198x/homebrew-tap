@@ -1,28 +1,35 @@
 class Build198x < Formula
   desc "The 198x family's build-tools pipeline — asset conversion, data packing, and media mastering for retro targets."
   homepage "https://build198x.github.io"
-  version "0.2.9"
+  version "0.2.10"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.9/build198x-aarch64-apple-darwin.tar.xz"
-      sha256 "96c9e59db63c58e2a5b5c001b1c070b33b98e5f4c8b256e64356e81c705231fe"
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.10/build198x-aarch64-apple-darwin.tar.xz"
+      sha256 "9b2387c0e8c59ef50d9fa478ba12bedd926e416a0e069f594104bbdee370f3b3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.9/build198x-x86_64-apple-darwin.tar.xz"
-      sha256 "d57c18250f1d1c35cbe1e581e2475168385755ebd5e75b6ceb4fbacf3613cedb"
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.10/build198x-x86_64-apple-darwin.tar.xz"
+      sha256 "f6726d0f48cab3c240fae355fb3ca4ce44207a378330cc5ab3fc341bf4451cb3"
     end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.9/build198x-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "c162898f415d9650482cb757a17124d0e2e986c98032d52a73ba4ebd418a233f"
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.10/build198x-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0e9e495c0110bdf8be11483d01f6ac4612665b312d8c1e90df56104c6a01b27c"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.10/build198x-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "406ebadd315890488a7df6d4e055fa9e23c92ee8cb0ed8c6ffcb89aa4fad4198"
+    end
   end
   license "GPL-2.0-or-later"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":     {},
-    "x86_64-apple-darwin":      {},
-    "x86_64-pc-windows-gnu":    {},
-    "x86_64-unknown-linux-gnu": {},
+    "aarch64-apple-darwin":      {},
+    "aarch64-unknown-linux-gnu": {},
+    "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
+    "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
   def target_triple
@@ -45,6 +52,9 @@ class Build198x < Formula
       bin.install "build198x"
     end
     if OS.mac? && Hardware::CPU.intel?
+      bin.install "build198x"
+    end
+    if OS.linux? && Hardware::CPU.arm?
       bin.install "build198x"
     end
     if OS.linux? && Hardware::CPU.intel?
