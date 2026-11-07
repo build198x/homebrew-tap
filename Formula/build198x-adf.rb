@@ -1,25 +1,25 @@
 class Build198xAdf < Formula
   desc "Create, master, verify, and inspect Amiga ADF floppy disk images (OFS/FFS) — the standalone ADF tool."
   homepage "https://build198x.github.io"
-  version "0.2.13"
+  version "0.2.15"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.13/build198x-adf-aarch64-apple-darwin.tar.xz"
-      sha256 "78b09ca71355d025ff771d1ed17920c83938da06064119b23143419d5d5b181b"
+      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.15/build198x-adf-aarch64-apple-darwin.tar.xz"
+      sha256 "0cc556cbe1356f8bbe724a5489cea5c12deb89f73426472009e5db3e09bce463"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.13/build198x-adf-x86_64-apple-darwin.tar.xz"
-      sha256 "cb051b53d933fadaa42e4a64248f732347df5c8fc1f75cca093f7cc31c3d2935"
+      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.15/build198x-adf-x86_64-apple-darwin.tar.xz"
+      sha256 "b1f05138677f9706020959ce4349e9187f61776b300b4c9dbe50b1f6fc638f2f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.13/build198x-adf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "480bda8d3e00e060f884d16abe7e250f32e4d4b69cb2f2b812b40c0eadebf842"
+      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.15/build198x-adf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "40a7d339a525e8fa4a491d7b7ea10ffbcf1b24c78054b9d754ab4cdd2b0d89ac"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.13/build198x-adf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5bab80a9d175bc9200316c94c4e9c44449022d0bef30567069b4e141fc4f1b51"
+      url "https://github.com/build198x/build198x/releases/download/build198x-adf-v0.2.15/build198x-adf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0a95dc93183c50163da0bf6fbbf3ad188960633d5126d62dd450b7db8fd85d3a"
     end
   end
   license "GPL-2.0-or-later"
