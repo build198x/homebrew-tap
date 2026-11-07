@@ -1,25 +1,25 @@
 class Build198x < Formula
   desc "The 198x family's build-tools pipeline — asset conversion, data packing, and media mastering for retro targets."
   homepage "https://build198x.github.io"
-  version "0.2.13"
+  version "0.2.15"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.13/build198x-aarch64-apple-darwin.tar.xz"
-      sha256 "12c9f61f121907b3403a7f4047093589ca7602a2bafe3b7a0322858cb6b2ed72"
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.15/build198x-aarch64-apple-darwin.tar.xz"
+      sha256 "7db73e83c7b26ee4c46405299f7967352cae2c0b1f4ccce11ef9bdbbca57f1f6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.13/build198x-x86_64-apple-darwin.tar.xz"
-      sha256 "6ee18d16f1b7271a31decb5e37ed8fb5b065fc7311422cadaee30c4fb873d4a3"
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.15/build198x-x86_64-apple-darwin.tar.xz"
+      sha256 "5fcc14225bd4d3cccd37fac5f40de3c38dedf426378093c3dc4e8a7e064108e5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.13/build198x-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "be04a389229bbb9c7ac524ea34ca9666a0f6f3309fb8eedef617754f3f30ca00"
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.15/build198x-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3a4a1ffe3aad174152f3c5bbe68e892e80dc1ea3807c3c9df9b8a06a01a2445f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.13/build198x-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cfda688ba30e811852efdc3e80949affeaf247d7360141a6d343aa36d13eb755"
+      url "https://github.com/build198x/build198x/releases/download/build198x-v0.2.15/build198x-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8c769202f9e4ad99f0a58102592aab996cd288da6117c33868a078ce7c6cc65a"
     end
   end
   license "GPL-2.0-or-later"
